@@ -1,0 +1,48 @@
+<!--Iván Ruipérez Benítez-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="Iván Ruipérez">
+<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+</head>
+<body>
+<div id="pseudo-wrap1"></div>
+<div id="pseudo-wrap2"></div>
+<!-- Begin Wrapper -->
+<div id="wrap">
+	<!--Begin Header -->
+	<header>
+		<h1><a href="#" title="Green Zone">Recetas-IvanR</a></h1>
+		<p>Las mejores recetas.</p>
+	</header>
+	<!--End Header -->
+	<nav>
+		<ul id="menu">
+			<li><a class="current" href="#">Home</a></li>
+			<li><a href="puntos.html" title="power">Puntos de fuerza</a></li>
+			<li><a href="contacto.html" title="Contact">Contacto</a></li>
+		</ul>
+	</nav>
+	<!-- Begin Content -->
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>
+	<!--End Content -->
+	<!--Begin Footer -->
+	<footer>
+	<div class="notice">&copy; Copyright <a title="Your Name and Link" href="https://github.com/IvanRuiperezB">Iván Ruipérez</a>. Todos los derechos reservados. </div>
+	</footer>
+	<!--End Footer -->
+</div>
+<!-- End Wrapper -->
+<!-- Begin Creative Commons Attribution -->
+<!-- Under the CC-NC License, you need to leave this untouched and intact. It's unobtrusive anyway. -->
+<div id="attribution">
+	<span>A <a title="Open Source" href="http://www.mlpdesign.net/free-css-templates.php">Free CSS Template</a> by <a title="XHTML &amp; CSS by MLP Design" href="http://www.mlpdesign.net">MLP Design</a><br>
+	<a title="Licensed under Creative Commons Non-Commercial" href="http://creativecommons.org/licenses/by-nc/3.0/">Licensed under CC-NC 3.0</a></span>
+</div>
+<!--End Creative Commons Attribution-->
+</body>
+</html>

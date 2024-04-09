@@ -1,0 +1,374 @@
+/*Iván Ruipérez Benítez*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color:#000;
+  color:#333;
+  font: normal 14px "Open Sans", sans-serif;
+  margin:0;
+}
+
+h1,h2,h3,p,li {
+  text-align:left;	
+}
+
+a {
+  background-color:inherit;
+  color:#333;
+  text-decoration:none; 
+}
+
+a:hover {
+  text-decoration:underline; 
+}
+
+
+
+#pseudo-wrap1 {
+background: #fbff00;
+background: -moz-linear-gradient(top,  #fbff00 1%, #c8c500 78%);
+background: -webkit-linear-gradient(top,  #fbff00 1%,#c8c500 78%);
+background: linear-gradient(to bottom,  #fbff00 1%,#c8c500 78%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbff00', endColorstr='#c8c500',GradientType=0 );
+height: 195px;
+margin:0;
+width:100%;
+z-index:-100;
+position:absolute;
+top:15px; left:0; right:0;
+}
+
+#pseudo-wrap2 {
+background: #c8c500;
+background: -moz-linear-gradient(top,  #c8c500 0%, #000000 98%);
+background: -webkit-linear-gradient(top,  #c8c500 0%,#000000 98%);
+background: linear-gradient(to bottom,  #c8c500 0%,#000000 98%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c500', endColorstr='#000000',GradientType=0 );
+height: 190px;
+margin:0;
+width:100%;
+z-index:-100;
+position:absolute;
+top:211px; left:0; right:0;
+}
+
+#wrap {
+  width:80%;
+  background-color:#fff;
+  color:inherit;
+  padding:0;
+  margin:30px auto 15px auto; 
+}
+
+header {
+  background: #fbff00;
+  background: -moz-linear-gradient(top,  #fbff00 0%, #cace00 50%, #ced101 51%, #000 100%);
+  background: -webkit-linear-gradient(top,  #fbff00 0%,#cace00 50%,#ced101 51%,#000 100%);
+  background: linear-gradient(to bottom,  #fbff00 0%,#cace00 50%,#ced101 51%,#000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbff00', endColorstr='#000',GradientType=0 );
+  color:#000;
+  height:200px;
+  -webkit-box-shadow: 0px 40px 20px -15px #C4D9A3;
+  -moz-box-shadow: 0px 40px 20px -15px #c4d9a3;
+  box-shadow: 0px 40px 20px -15px #c4d9a3;
+  border:10px solid #fff;
+  border-bottom:1px solid #fff;
+}
+
+header h1 {	
+  text-align:center;
+  padding:0;
+  margin:80px auto 0 auto; 
+}
+
+header a
+{	background-color:inherit;
+	color:#000;
+	text-decoration:none; }
+	
+header p
+{	text-align:center;
+	margin:0 auto; }
+
+nav {
+  text-align: center;
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  margin: 0 auto; /* Centra el menú horizontalmente */
+}
+
+/* Estilo para el menú principal */
+nav ul#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul#menu li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+nav ul#menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul#menu li p {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+nav ul#menu li a:hover {
+  background-color: #f0f0f0; 
+}
+
+nav ul#menu li p:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilo para el menú desplegable */
+nav ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+nav ul.submenu li {
+    display: block;
+}
+
+nav ul#menu li:hover ul.submenu {
+    display: block;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Content */
+#content
+{	text-align:left;
+	width:90%;
+	padding:0 25px 10px 25px;
+	margin:0 auto;	}
+	
+#content h2
+{	
+	padding:0;
+	margin:0 auto; }	
+
+#content h3
+{	background-color:inherit;
+	color:#c8c500;
+	font:bold 12pt Arial,sans-serif;	
+	padding:0;	}
+
+#content p a
+{	background-color:inherit;
+	color:#000; }	
+#content p
+{	text-align:justify;
+	line-height:24px; }
+
+#content p.center { text-align: center; }
+	
+#content li
+{	line-height:24px;	}
+
+#content li a
+{	background-color:inherit;
+	color:#000;
+	text-decoration:none;	}
+
+#content li a:hover
+{	text-decoration:underline; }
+
+#content ul {
+  list-style:none;
+  padding:0;
+}
+	
+#content ul li
+{	list-style-position:inside;
+  text-indent: 0px;
+	list-style-type: disc;
+  padding-left:20px;
+	margin:0; }	
+	
+#content ul li:before {
+  background-color:inherit;
+  color:#c8c500;
+  font-size:16px;
+}
+
+#content .post
+{	padding:0 0 20px 0;
+	margin:auto;	}
+
+#content img.photo
+{
+   display: block;
+   height:480x;
+   width: 720px;
+   margin-left: auto;
+   margin-right: auto;}
+
+/* Footer */	
+footer {
+  background: #c8c500;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb50c', endColorstr='#568e07',GradientType=0 );
+  color:#fff;
+  height:40px;
+  text-align:center;
+  font-size:12px;
+  padding:0;
+  margin:0 auto;	
+  border:10px solid #fff;
+}
+
+footer a
+{	background-color:inherit;
+	color:#000;	
+	text-decoration:none;	}
+	
+footer .notice
+{	background-color:inherit;
+	color: #000;
+	padding:0;
+  line-height:40px;
+}
+
+/* Attribution: Under Creative Commons, Attribution should not be removed or hidden */
+#attribution {	
+  background-color:inherit;
+  color:#c8c500;
+  text-align:center;
+  font-size:11px;
+  padding:5px 0;
+  margin:0 auto;	
+}
+
+#attribution a
+{	background-color:inherit;
+	color:#c8c500;
+	text-decoration:none;	}
+	
+#attribution a:hover
+{	color:#999;	}
+
+/* Responsive Styles */
+
+#show-menu {display: none;}
+.responsive { text-align:left; font-weight:bold; font-size:18px; font-style:underline; padding: 0; display:none; margin-left:20px;}
+
+@media screen and (max-width : 700px){
+
+body { font-size:12px; }
+blockquote { font-size:16px; }
+blockquote:before { font-size:80px;}
+#footer { font-size: 11px; }
+#attribution { font-size: 10px; }
+
+ul#menu {display:none;}
+.responsive { display:block;}
+#show-menu:checked ~ ul#menu {display: block; position: absolute;  width:50%; margin:1% 0 0 -8%; overflow:visible; z-index:100;}
+ul#menu li { display: block; text-align:left; margin:0 0 0 20%;}
+ul#menu li a { display: block; background-color:#fff;}
+ul#menu li a:hover { background-color:#c8c500; color:#fff;}
+ul#menu li a.current, ul#menu li a.active:hover {    background-color:#eee;  color: #000;}
+}
+
+table {
+  width: 30%;
+  border-collapse: collapse;
+}
+
+/* Estilo para las celdas de encabezado */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+td a {
+  background-color:inherit;
+	color:#000;
+	text-decoration:none;
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.mini {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-contenedor {
+  max-width: 400px;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para los campos de entrada */
+.form-grupo {
+  margin-bottom: 20px;
+}
+
+.form-grupo label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* Estilo para el botón de enviar */
+.enviar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background-color: #0056b3;
+}
