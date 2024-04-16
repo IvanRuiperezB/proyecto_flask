@@ -6,12 +6,18 @@
         <thead>
             <tr>
                 <th>Receta</th>
-                <th>Descripción</th>
+                <th>Autor</th>
                 <th>Detalles</th>
             </tr>
         </thead>
         <tbody>
-            
+            {% for item in recetas%}
+                <tr>
+                    <td>{{item["name"]}}</td>
+                    <td>{{item["autor"]}}</td>
+                    <td><a href="/receta?id={{item["detalles"]}}">Detalles</a></td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>
