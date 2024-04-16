@@ -37,9 +37,11 @@ def receta():
             for ingrediente in receta["ingredients"]:
                 ing=ingrediente["qty"]+" "+ingrediente["name"]
                 ingredientes.append(ing)
-            if len(receta["instructions"]) > 0:
+            if len(receta["instructions"]) > 1:
                 for paso in receta["instructions"]:
                     pasos.append(paso["detail"])
+            else:
+                pasos=0
             return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
     return abort(404)
 app.run("0.0.0.0",5000,debug=True)

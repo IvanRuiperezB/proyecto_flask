@@ -20,10 +20,14 @@
 </section>
 <section class="post">
     <h2>Pasos</h2>
-    <ol>
-        {% for paso in pasos %}
-            <li>{{paso}}</li>
-        {% endfor %}
-    </ol>
+    {% if pasos != 0 %}
+        <ol>
+            {% for paso in pasos %}
+                <li>{{paso}}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No hay pasos para esta receta.</p>
+    {% endif %}
 </section>
 {% endblock %}
