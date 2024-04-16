@@ -83,9 +83,9 @@
 	"author": "Pedro Arupa",
 	"name": "Arroz con pollo Peruano",
 	"description": "Este es uno de los platos favoritos en las mesas peruanas, ya sea con pato –tradicional en el norte del Perú- o con pollo. Es delicioso y tiene muchas variaciones. El arroz puede hacerse graneado o como un risotto y, aunque es verde y tiene bastante cilantro su sabor es bastante sutil. Pueden agregar otros vegetales, si desean.",
-	"preparation_time": 15.0,
-	"cook_time": 45.0,
-	"servings": 4.0,
+	"preparation_time": 15,
+	"cook_time": 45,
+	"servings": 4,
 	"tags": ["Pollo","Arroz"],
 	"ingredients": [
 		{
@@ -159,31 +159,31 @@
 	],
 	"instructions": [
 		{
-			"id": 1.0,
+			"id": 1,
 			"detail": "En una licuadora, licúa cilantro junto con la espinaca y agua como para hacer una pasta homogénea. Reserva."
 		},
 		{
-			"id": 2.0,
+			"id": 2,
 			"detail": "Seca el pollo con papel toalla y sazona con sal y pimienta. En una olla se calienta el aceite a fuego medio y se fríe el pollo hasta que esté dorado por ambos lados, unos 7 minutos. Retira de la olla y ponlo en un plato."
 		},
 		{
-			"id": 3.0,
+			"id": 3,
 			"detail": "En la misma olla fríe la cebolla, ajo y la pasta de ají amarillo, revolviendo por 5 minutos. Incorpora el cilantro y espinaca licuado, fríe por 3 minutos. Agrega la cerveza, caldo de pollo, y agrega el pollo en la olla."
 		},
 		{
-			"id": 4.0,
+			"id": 4,
 			"detail": "Hierve, tapa y baja el fuego. Cuece por 20 minutos. Corrige la sazón con más sal y pimienta si fuera necesario."
 		},
 		{
-			"id": 5.0,
+			"id": 5,
 			"detail": "En otra olla calienta 1 cucharada de aceite. Incorpora el arroz y revuélvelo bien. Agrega las alverjitas, zanahorias, pimiento, maíz, y 3 1/2 tazas del caldo que utilizaste para cocinar el pollo. Deja que rompa hervor, tapa, baja el fuego al mínimo y deja cocer por 20 a 25 minutos. Revuelve con un tenedor y volver a tapar."
 		},
 		{
-			"id": 6.0,
+			"id": 6,
 			"detail": "Cuando el arroz esté a punto, servir en cuatro platos, poner encima una pierna de pollo y Salsa Criolla al costado. Si quieren también un poco del juguito en el que se coció el pollo."
 		},
 		{
-			"id": 7.0,
+			"id": 7,
 			"detail": "Para hacer la Salsa Criolla, corta 1/2 cebolla roja en láminas muy delgadas a lo largo, lava bien y escurre. Mezcla con 1/2 tomate cortado en tiras muy finas, hojas de cilantro, sal, pimienta, jugo de 1 limón y 1 cucharada de aceite de oliva. Si desean le pueden agregar tiritas de ají."
 		}
 	],
@@ -202,7 +202,7 @@
     "description": "Las empanadas son una de las comidas favoritas de mi familia. No importa qué relleno tengan, ¡siempre son un éxito! Esta vez las preparé con pollo a la mostaza y miel. La combinación de sabores es perfecta y le dará a tu mesa un toque diferente. Para ahorrar tiempo, puedes preparar el pollo el día anterior y conservarlo en el refrigerador hasta el momento de hacer las empanadas. Sírvelas como merienda, almuerzo o cena, y si quieres hacer la comida mucho más completa acompáñalas con un riquísimo.",
     "preparation_time": 15,
     "cook_time": 75,
-    "servings": 0,
+    "servings": 3,
     "tags": ["Pollo","Salsa"],
     "ingredients": [
       {
@@ -257,14 +257,14 @@
   },
    {
     "_id": {
-      "$oid": "81F1931D8BD743ABAAE4AEB11E557A9C"
+      "$oid": "81F1931D8BD743ABAAE4AEB11E557A8C"
     },
     "author": "Nicole Presley",
     "name": "Paella Vegetariana con Pimientos y Garbanzos",
     "description": " La paella es un rico plato cultura gastronómica española! Esta es mi versión vegetariana de la paella. Este plato está lleno de verduras variadas y un puñado de garbanzos. ¡Delicioso!",
     "preparation_time": 10,
     "cook_time": 40,
-    "servings": 0,
+    "servings": 2,
     "tags": ["Vegetariano","Verduras"],
     "ingredients": [
       {
@@ -480,7 +480,7 @@
     "description": "Este sabroso y refrescante ceviche se prepara muy rápido y fácilmente. Es ideal para servirlo como entrada o plato principal acompañado con tostones o platanutres. Lo suelo preparar en los fines de semana para mi familia cuando no tengo deseos de cocinar algo fuerte. Nos gusta mucho acompañarlo con un vino blanco.",
     "preparation_time": 15,
     "cook_time": 180,
-    "servings": 0,
+    "servings": 4,
     "tags":["Marisco","Frutas"],
     "ingredients": [
       {

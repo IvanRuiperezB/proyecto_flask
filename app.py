@@ -28,16 +28,18 @@ def receta():
     id=request.args.get("id")
     with open("Data_Recipes.json") as fich:
         datos=json.load(fich)
-    recetas=[]
+    recetas={}
     ingredientes=[]
     pasos=[]
     for receta in datos:
         if receta["_id"]["$oid"] == id:
-            receta1={"name":receta["name"],"autor":receta["author"],"desc":receta["description"],"prep":receta["preparation_time"],"cocina":receta["cook_time"],"comensales":receta["servings"]}
-            recetas.append(receta1)
+            recetas={"name":receta["name"],"autor":receta["author"],"desc":receta["description"],"prep":receta["preparation_time"],"cocina":receta["cook_time"],"comensales":receta["servings"]}
             for ingrediente in receta["ingredients"]:
                 ing=ingrediente["qty"]+" "+ingrediente["name"]
                 ingredientes.append(ing)
-            pasos=receta["instruction"].copy()
-    return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
+            if len(receta["instructions"]) > 0:
+                for paso in receta["instructions"]:
+                    pasos.append(paso["detail"])
+            return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
+    return abort(404)
 app.run("0.0.0.0",5000,debug=True)
