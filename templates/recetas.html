@@ -2,6 +2,14 @@
 {% block title %}RecetasIvanR - Inicio{% endblock %}
 {% block content %}
 <div class="post">
-    fasd
+    <div class="form-contenedor">
+        <form action="/listarecetas" method="post">
+            <div class="form-grupo">
+                <label>Receta: </label>
+                <input type="text" name="receta" value="{{receta}}">
+            </div>
+            <button type="submit" class="enviar">Enviar</button>
+        </form>
+    </div>
 </div>
 {% endblock %}
