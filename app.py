@@ -1,12 +1,15 @@
 from flask import Flask, render_template, abort, request
 import json
 app = Flask(__name__)
+
 @app.route('/')
 def inicio():
     return render_template("inicio.html")
+
 @app.route('/recetas')
 def recetas():
     return render_template("recetas.html")
+
 @app.route('/listarecetas', methods=["POST"])
 def listarecetas():
     receta=request.form.get("receta")
@@ -19,4 +22,22 @@ def listarecetas():
                 receta1={"name":item["name"],"autor":item["author"],"detalles":item["_id"]["$oid"]}
                 recetas.append(receta1)
     return render_template("listarecetas.html",recetas=recetas)
+
+@app.route('/receta')
+def receta():
+    id=request.args.get("id")
+    with open("Data_Recipes.json") as fich:
+        datos=json.load(fich)
+    recetas=[]
+    ingredientes=[]
+    pasos=[]
+    for receta in datos:
+        if receta["_id"]["$oid"] == id:
+            receta1={"name":receta["name"],"autor":receta["author"],"desc":receta["description"],"prep":receta["preparation_time"],"cocina":receta["cook_time"],"comensales":receta["servings"]}
+            recetas.append(receta1)
+            for ingrediente in receta["ingredients"]:
+                ing=ingrediente["qty"]+" "+ingrediente["name"]
+                ingredientes.append(ing)
+            pasos=receta["instruction"].copy()
+    return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
 app.run("0.0.0.0",5000,debug=True)
