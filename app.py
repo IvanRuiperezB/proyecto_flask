@@ -6,9 +6,23 @@ app = Flask(__name__)
 def inicio():
     return render_template("inicio.html")
 
-@app.route('/recetas')
+@app.route('/recetas', methods=["POST","GET"])
 def recetas():
-    return render_template("recetas.html")
+    if request.method=="GET":
+        return render_template("recetas.html")
+    else:
+        receta=request.form.get("receta")
+        with open("Data_Recipes.json") as fich:
+            datos=json.load(fich)
+        recetas=[]
+        for item in datos:
+            if receta.lower() in item["name"].lower():
+                if item["name"] not in recetas:
+                    receta1={"name":item["name"],"autor":item["author"],"detalles":item["_id"]["$oid"]}
+                    recetas.append(receta1)
+        if len(recetas) == 0:
+            recetas=0
+        return render_template("recetas.html",receta=receta,recetas=recetas)
 
 @app.route('/listarecetas', methods=["POST"])
 def listarecetas():

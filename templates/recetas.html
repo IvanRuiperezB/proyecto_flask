@@ -3,13 +3,39 @@
 {% block content %}
 <div class="post">
     <div class="form-contenedor">
-        <form action="/listarecetas" method="post">
+        <form action="/recetas" method="post">
             <div class="form-grupo">
                 <label>Receta: </label>
                 <input type="text" name="receta" value="{{receta}}">
             </div>
             <button type="submit" class="enviar">Enviar</button>
         </form>
+    </div><br>
+    <div class="post">
+        {% if recetas %}
+            {% if recetas != 0 %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Receta</th>
+                            <th>Autor</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in recetas%}
+                            <tr>
+                                <td>{{item["name"]}}</td>
+                                <td>{{item["autor"]}}</td>
+                                <td><a href="/receta?id={{item["detalles"]}}">Detalles</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No hay recetas que coincidan con la palabra de búsqueda.</p>
+            {% endif %}
+        {% endif %}
     </div>
 </div>
 {% endblock %}
