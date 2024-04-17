@@ -9,7 +9,8 @@ def inicio():
 @app.route('/recetas', methods=["POST","GET"])
 def recetas():
     if request.method=="GET":
-        return render_template("recetas.html")
+        recetas=1
+        return render_template("recetas.html",recetas=recetas)
     else:
         receta=request.form.get("receta")
         with open("Data_Recipes.json") as fich:
