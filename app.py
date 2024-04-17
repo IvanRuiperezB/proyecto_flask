@@ -21,6 +21,8 @@ def listarecetas():
             if item["name"] not in recetas:
                 receta1={"name":item["name"],"autor":item["author"],"detalles":item["_id"]["$oid"]}
                 recetas.append(receta1)
+    if len(recetas) == 0:
+        recetas=0
     return render_template("listarecetas.html",recetas=recetas)
 
 @app.route('/receta')

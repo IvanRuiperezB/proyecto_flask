@@ -2,23 +2,27 @@
 {% block title %}RecetasIvanR - Listas{% endblock %}
 {% block content %}
 <div class="post">
-    <table>
-        <thead>
-            <tr>
-                <th>Receta</th>
-                <th>Autor</th>
-                <th>Detalles</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in recetas%}
+    {% if recetas != 0%}
+        <table>
+            <thead>
                 <tr>
-                    <td>{{item["name"]}}</td>
-                    <td>{{item["autor"]}}</td>
-                    <td><a href="/receta?id={{item["detalles"]}}">Detalles</a></td>
+                    <th>Receta</th>
+                    <th>Autor</th>
+                    <th>Detalles</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for item in recetas%}
+                    <tr>
+                        <td>{{item["name"]}}</td>
+                        <td>{{item["autor"]}}</td>
+                        <td><a href="/receta?id={{item["detalles"]}}">Detalles</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay recetas que coincidan con la palabra de búsqueda.</p>
+    {% endif %}
 </div>
 {% endblock %}
