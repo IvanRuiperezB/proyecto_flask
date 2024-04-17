@@ -8,13 +8,18 @@ def inicio():
 
 @app.route('/recetas', methods=["POST","GET"])
 def recetas():
+    with open("Data_Recipes.json") as fich:
+            datos=json.load(fich)
+    autores=[]
+    for dato in datos:
+        if dato["author"] not in autores:
+            autores.append(dato["author"])
     if request.method=="GET":
         recetas=1
-        return render_template("recetas.html",recetas=recetas)
+        return render_template("recetas.html",recetas=recetas,autores=autores)
     else:
         receta=request.form.get("receta")
-        with open("Data_Recipes.json") as fich:
-            datos=json.load(fich)
+        seleccionado=request.form.get("autor")
         recetas=[]
         for item in datos:
             if receta.lower() in item["name"].lower():
@@ -23,7 +28,7 @@ def recetas():
                     recetas.append(receta1)
         if len(recetas) == 0:
             recetas=0
-        return render_template("recetas.html",receta=receta,recetas=recetas)
+        return render_template("recetas.html",receta=receta,recetas=recetas,autores=autores,seleccionado=seleccionado)
 
 @app.route('/listarecetas', methods=["POST"])
 def listarecetas():
