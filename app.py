@@ -72,5 +72,5 @@ def receta():
             return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
     return abort(404)
 
-port=os.environ["PORT"]
-app.run("0.0.0.0", int(port),debug=False)
+if __name__ == '__main__':
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
