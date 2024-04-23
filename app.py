@@ -70,4 +70,6 @@ def receta():
                 pasos=0
             return render_template("receta.html",recetas=recetas,ingredientes=ingredientes,pasos=pasos)
     return abort(404)
-app.run("0.0.0.0",5000,debug=True)
+
+port=os.environ["PORT"]
+app.run("0.0.0.0", int(port),debug=False)
