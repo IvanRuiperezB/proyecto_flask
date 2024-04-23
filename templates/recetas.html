@@ -11,7 +11,7 @@
             <div class="form-grupo">
                 <label>Autor:</label>
                 <select name="autores">
-                    {% if seleccionado %}
+                        <option value="">Seleccione un autor</option>
                         {% for autor in autores %}
                             {% if seleccionado==autor %}
                                 <option selected value="{{autor}}">{{autor}}</option>
@@ -19,16 +19,6 @@
                                 <option value="{{autor}}">{{autor}}</option>
                             {% endif %}
                         {% endfor %}
-                    {%else%}
-                        <option selected>Seleccione un autor</option>
-                        {% for autor in autores %}
-                            {% if seleccionado==autor %}
-                                <option selected value="{{autor}}">{{autor}}</option>
-                            {% else %}
-                                <option value="{{autor}}">{{autor}}</option>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
                 </select>
             </div>
             <button type="submit" class="enviar">Enviar</button>

@@ -16,18 +16,23 @@ def recetas():
             autores.append(dato["author"])
     if request.method=="GET":
         recetas=1
-        return render_template("recetas.html",recetas=recetas,autores=autores)
+        seleccionado=2
+        return render_template("recetas.html",recetas=recetas,autores=autores,seleccionado=seleccionado)
     else:
         receta=request.form.get("receta")
-        seleccionado=request.form.get("autor")
+        seleccionado=request.form.get("autores")
         recetas=[]
         for item in datos:
-            if receta.lower() in item["name"].lower():
+            if receta.lower() in item["name"].lower() and seleccionado == item["author"]:
                 if item["name"] not in recetas:
                     receta1={"name":item["name"],"autor":item["author"],"detalles":item["_id"]["$oid"]}
                     recetas.append(receta1)
         if len(recetas) == 0:
             recetas=0
+        autores=[]
+        for dato in datos:
+            if dato["author"] not in autores:
+                autores.append(dato["author"])
         return render_template("recetas.html",receta=receta,recetas=recetas,autores=autores,seleccionado=seleccionado)
 
 @app.route('/listarecetas', methods=["POST"])
