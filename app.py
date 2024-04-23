@@ -16,14 +16,13 @@ def recetas():
             autores.append(dato["author"])
     if request.method=="GET":
         recetas=1
-        seleccionado=2
-        return render_template("recetas.html",recetas=recetas,autores=autores,seleccionado=seleccionado)
+        return render_template("recetas.html",recetas=recetas,autores=autores)
     else:
         receta=request.form.get("receta")
         seleccionado=request.form.get("autores")
         recetas=[]
         for item in datos:
-            if receta.lower() in item["name"].lower() and seleccionado == item["author"]:
+            if receta.lower() in item["name"].lower() and seleccionado in item["author"]:
                 if item["name"] not in recetas:
                     receta1={"name":item["name"],"autor":item["author"],"detalles":item["_id"]["$oid"]}
                     recetas.append(receta1)
