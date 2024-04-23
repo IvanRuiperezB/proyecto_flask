@@ -1,4 +1,5 @@
-from flask import Flask, render_template, abort, request, os
+from flask import Flask, render_template, abort, request
+import os
 import json
 app = Flask(__name__)
 
